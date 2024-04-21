@@ -49,6 +49,6 @@ We have created a website where people can store and acces their travel experinc
 
 ## Navigation
 
-- [Home](travel_log-main/client/index.html)
+- [Home](travel_log-main/client/public/index.html)
 - [Team](README.md)
 - [Project Details](ProjectDetails.pdf)
