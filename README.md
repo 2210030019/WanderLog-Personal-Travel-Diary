@@ -30,8 +30,8 @@ We have created a website where people can store and acces their travel experinc
     -----
     -----
     <div style="flex: 1; margin-right: 20px;">
-        <img src="images/image.jpg" alt="Renee Sharon" width="100">
-        <h3>Renee Sharon</h3>
+        <img src="images/image.jpg" alt="G.Renee Sharon" width="100">
+        <h3>G.Renee Sharon</h3>
         <div>
             <a href="LINKEDIN_URL" target="_blank">LinkedIn</a> | <a href="GITHUB_URL" target="_blank">GitHub</a>
         </div>
