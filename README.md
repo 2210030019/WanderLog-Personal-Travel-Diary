@@ -24,7 +24,7 @@ We have created a website where people can store and acces their travel experinc
         <img src="images/image.jpg" alt="C.Hasritha Reddy" width="100">
         <h3>C.Hasritha Reddy</h3>
         <div>
-            <a href="LINKEDIN_URL" target="_blank">LinkedIn</a> | <a href="GITHUB_URL" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/hasritha-reddy-cheruku-525457286/" target="_blank">LinkedIn</a> | <a href="https://github.com/2210030012-Hasritha" target="_blank">GitHub</a>
         </div>
     </div>
     -----
@@ -33,7 +33,7 @@ We have created a website where people can store and acces their travel experinc
         <img src="images/image.jpg" alt="G.Renee Sharon" width="100">
         <h3>G.Renee Sharon</h3>
         <div>
-            <a href="LINKEDIN_URL" target="_blank">LinkedIn</a> | <a href="GITHUB_URL" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/renee-sharon-gaddam-511b292bb/" target="_blank">LinkedIn</a> | <a href="https://github.com/ReneeSharon" target="_blank">GitHub</a>
         </div>
     </div>
     -----
@@ -42,7 +42,7 @@ We have created a website where people can store and acces their travel experinc
         <img src="images/image.jpg" alt="R.Tejaswi Niharika" width="100">
         <h3>R.Tejaswi Niharika</h3>
         <div>
-            <a href="LINKEDIN_URL" target="_blank">LinkedIn</a> | <a href="GITHUB_URL" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/relli-tejaswi-niharika-032696295/" target="_blank">LinkedIn</a> | <a href="https://github.com/TejaswiNiharika21" target="_blank">GitHub</a>
         </div>
     </div>
 </div>
