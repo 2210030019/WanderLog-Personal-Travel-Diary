@@ -6,7 +6,7 @@ Project can be accessed by using this link --- https://github.com/2210030019/Y22
 
 ## Project Description
 
-We have created a website where people can store and acces their travel experinces. It is similar to a personal diary but solely based on travelling. We can add the exact date we visited, we can upload images as well.
+"Travel Log" is a personal diary-style web application tailored for individuals to privately store and reminisce about their travel experiences. It provides users with a secure platform to document their adventures, including details about visited places, memorable moments, and images captured during their journeys.
 
 ## Team Members
 
