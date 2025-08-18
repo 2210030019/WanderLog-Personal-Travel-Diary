@@ -4,11 +4,10 @@ import ReactMapGL ,{ Marker , Popup } from 'react-map-gl';
 
 import { listLogEntries } from './API';
 import LogEntryForm from './logEntryForm';
-
-
+import { FlyToInterpolator } from 'react-map-gl';
 const App = () =>{
 
-  const token = 'pk.eyJ1IjoiaGFyc2hpdGFhIiwiYSI6ImNsdWIzend1ZjBjeGoyaG5zZXB5enNndmQifQ.QYa70ShjJoQFqO2EsGO-0Q';
+  const token = process.env.REACT_APP_MAPBOX_TOKEN;
   const [logEntries , setLogEntries] = useState([]);
   const [showPopup , setShowPopup] = useState({});
   const [addEntryLocation , setAddEntryLocation] = useState(null);
@@ -17,7 +16,9 @@ const App = () =>{
     height: '100vh',
     latitude: 37.6,
     longitude: -95.665,
-    zoom: 5
+    zoom: 5,
+    transitionDuration: 300,
+    transitionInterpolator: new FlyToInterpolator(),
   });
 
   const getEntries = async ()=> {
@@ -95,7 +96,7 @@ const App = () =>{
             <h5>{entry.title}</h5>
             <p>{entry.comments}</p>
             <div className='popup-image'>
-            {entry.image && <img src={entry.image} alt='image' style= {{height : '100px', width :'100px'}}/>}
+            {entry.image && <img src={entry.image} alt={entry.title} style= {{height : '100px', width :'100px'}}/>}
             <small>Visited on: {new Date(entry.visitDate).toLocaleDateString()}</small>
             </div>
           </div>
@@ -137,7 +138,7 @@ const App = () =>{
           anchor="top" >
           <div className='popup'> 
             <h3>Add your log Entry !</h3>
-            <LogEntryForm location={addEntryLocation} onClose={()=> {
+            <LogEntryForm location={addEntryLocation} onClose={() => {
               setAddEntryLocation(null);
               getEntries();
             }}/>

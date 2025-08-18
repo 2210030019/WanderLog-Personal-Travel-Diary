@@ -12,27 +12,27 @@ const LogEntryForm = ({ location , onClose})=>{
             setLoading(true);
             data.latitude = location.latitude ;
             data.longitude = location.longitude; 
-            const created = createLogEntry(data);
-            console.log(created);
+            await createLogEntry(data);
+            setLoading(false);
             onClose();
         } catch (error) {   
             console.log(error);
             setError(error.message);
+            setLoading(false);
         }
-        setLoading(false);  
     }
     return(
     <form className='entry-form' onSubmit={handleSubmit(onSubmit)}>
         { error ? <h3 className='error'>{error}</h3>: null}
         <label htmlFor ='title' >Title</label>
-        <input type="text" name="title" required ref={register}/>
+        <input type="text" name="title" required {...register("title")} />
         <br/>
         <label htmlFor ='comments' >Comments</label>
-        <textarea  name="comments" rows={3} ref={register}></textarea>
+        <textarea name="comments" rows={3} {...register("comments")}></textarea>
         <label htmlFor="image">Image</label>
-        <input name="image"ref={register} />
+        <input name="image" {...register("image")} />
         <label htmlFor="visitDate">Visit Date</label>
-        <input name="visitDate" type='date' required ref={register}/>
+        <input name="visitDate" type='date' required {...register("visitDate")} />
         <button disabled={loading}>{loading ? 'Loading...' : 'Create Entry'}</button>
     </form>
     );
