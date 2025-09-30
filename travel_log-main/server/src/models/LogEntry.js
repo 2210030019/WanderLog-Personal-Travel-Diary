@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose; 
 
-
 const logEntrySchema =  new Schema ({
     title: {
         type :  String ,
@@ -29,6 +28,19 @@ const logEntrySchema =  new Schema ({
         min : -180,
         max :180,
     },
+    // User information
+    userId: {
+        type: String,
+        required: true,
+    },
+    userEmail: {
+        type: String,
+        required: true,
+    },
+    userName: {
+        type: String,
+        required: true,
+    },
     created_at  : {
         type : Date , 
         default : Date.now,
@@ -45,8 +57,7 @@ const logEntrySchema =  new Schema ({
     }
 },{
     timestamps : true,
-}
-);
+});
 
 const logEntry = mongoose.model('LogEntry', logEntrySchema);
 
