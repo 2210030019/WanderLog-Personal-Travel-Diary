@@ -3,12 +3,12 @@ import { useState , useEffect} from 'react';
 import ReactMapGL ,{ Marker , Popup } from 'react-map-gl';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import { listLogEntries } from './API';
-import LogEntryForm from './logEntryForm';
+import { listLogEntries } from './API.jsx';
+import LogEntryForm from './logEntryForm.jsx';
 import { FlyToInterpolator } from 'react-map-gl';
-import { AuthProvider, useAuth } from './contexts/AuthContext';
-import LoginButton from './components/LoginButton';
-import AuthCallback from './components/AuthCallback';
+import { AuthProvider, useAuth } from './contexts/AuthContext.jsx';
+import LoginButton from './components/LoginButton.jsx';
+import AuthCallback from './components/AuthCallback.jsx';
 import './App.css';
 
 const MapComponent = () => {
