@@ -40,3 +40,30 @@
 /* .marker {
   stroke : #f8c102;
 } */
+
+/* Map container improvements for better touch/mouse interaction */
+.mapboxgl-map {
+  touch-action: none !important;
+}
+
+.mapboxgl-canvas {
+  outline: none !important;
+}
+
+.mapboxgl-canvas-container {
+  cursor: grab;
+}
+
+.mapboxgl-canvas-container.mapboxgl-interactive:active {
+  cursor: grabbing;
+}
+
+/* Improve marker interaction */
+.marker {
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.marker:hover {
+  transform: scale(1.1);
+}

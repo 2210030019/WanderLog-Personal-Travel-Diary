@@ -9,6 +9,7 @@ import { FlyToInterpolator } from 'react-map-gl';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import LoginButton from './components/LoginButton';
 import AuthCallback from './components/AuthCallback';
+import './App.css';
 
 const MapComponent = () => {
   const { isAuthenticated } = useAuth();
@@ -21,7 +22,9 @@ const MapComponent = () => {
     height: '100vh',
     latitude: 37.6,
     longitude: -95.665,
-    zoom: 5
+    zoom: 5,
+    bearing: 0,
+    pitch: 0
   });
 
   const getEntries = async ()=> {
@@ -79,6 +82,17 @@ const MapComponent = () => {
         onDblClick={showAddMarkerPopup}
         mapStyle ='mapbox://styles/mapbox/streets-v12'
         onViewportChange={nextViewport => setViewport(nextViewport)}
+        dragPan={true}
+        dragRotate={false}
+        scrollZoom={true}
+        touchZoom={true}
+        touchRotate={false}
+        keyboard={true}
+        doubleClickZoom={false}
+        minZoom={1}
+        maxZoom={20}
+        touchZoomRotate={true}
+        attributionControl={false}
       >
         {logEntries.map( entry => {
           return(
